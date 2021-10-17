@@ -1,0 +1,5 @@
+id|integer,
+cust_nr|varchar,
+name|varchar,
+lname|varchar,
+business_desc|varchar
