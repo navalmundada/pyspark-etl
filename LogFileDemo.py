@@ -22,7 +22,9 @@ if __name__ == "__main__":
     df= spark.read.csv(path='data/my_file.csv', schema=sch, header=False, sep=',')
 
     df.show()
-
+    df.schema
+    df.schema.fields
+    df.dtype()
     # Convert all columns datatype to Lower or upper.
     #Approach 1 using for loop.
 
@@ -39,6 +41,12 @@ if __name__ == "__main__":
         *[upper(col(col_name)).name(col_name) for col_name in df.columns]
     )
 
+    #[Column<'upper(id) AS `id`'>, Column<'upper(cust_nr) AS `cust_nr`'>, Column<'upper(name) AS `name`'>, Column<'upper(lname) AS `lname`'>, Column<'upper(business_desc) AS `business_desc`'>]
+
+
+    #my_list=[upper(col(col_name)) for col_name in df.columns]
+    print("this is my list")
+    #print(my_list)
     df_using_lc.show(10)
 
 

@@ -1,0 +1,5 @@
+id|emp_id|concat(id,cust_nr)
+cust_nr|customer_number|
+bus_name|business_name|substring(bus_tym,1,4)
+bus_tym|business_time|
+bus_desciprion|business_desciption|
